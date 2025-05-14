@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <style>
+        body { background-color: #f0f0f0; font-family: Arial, sans-serif; color: #333; }
+        h1 { color: #007bff; }
+        .container {
+            max-width: 600px; margin: 0 auto; padding: 20px;
+            background-color: #fff; border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%; padding: 10px; margin: 5px 0;
+            box-sizing: border-box; border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff; color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%; border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px; text-align: left; border-bottom: 1px solid #ddd;
+        }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Student Data</h1>
+        <label for="studentid">Student ID:</label>
+        <input type="text" id="studentid">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="class">Class:</label>
+        <input type="text" id="class">
+        <label for="age">Age:</label>
+        <input type="text" id="age">
+
+        <input type="submit" id="savestudent" value="Save Student (POST)">
+        <input type="submit" id="updatestudent" value="Update Student (PUT)">
+        <input type="submit" id="deletestudent" value="Delete Student (DELETE)">
+        <input type="submit" id="getstudents" value="View All Students (GET)">
+        <p id="studentSaved"></p>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
